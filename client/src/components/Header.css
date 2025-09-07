@@ -1,0 +1,140 @@
+/* Header.css */
+
+.header {
+    height: 70vh;
+    margin: 30px auto;
+    background: url('/header_img.png') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* Overlay */
+  .header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.35);
+  }
+  
+  /* Content */
+  .header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    max-width: 50%;
+    bottom: 12%;
+    left: 6vw;
+    z-index: 2;
+    color: #fff;
+  
+    /* Animation */
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+  }
+  
+  /* Headings and text */
+  .header-contents h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .header-contents p {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    max-width: 90%;
+  }
+  
+  /* Button */
+  .header-contents button {
+    background: #ff4d30;
+    color: #fff;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, transform 0.2s ease;
+  }
+  
+  .header-contents button:hover {
+    background: #e63f25;
+    transform: translateY(-2px);
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .header-contents {
+      max-width: 70%;
+    }
+  
+    .header-contents h1 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      height: 55vh;
+    }
+  
+    .header-contents {
+      max-width: 80%;
+      bottom: 8%;
+    }
+  
+    .header-contents h1 {
+      font-size: 1.8rem;
+    }
+  
+    .header-contents p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      height: 45vh;
+    }
+  
+    .header-contents {
+      max-width: 90%;
+      left: 5%;
+      gap: 0.8rem;
+    }
+  
+    .header-contents h1 {
+      font-size: 1.4rem;
+    }
+  
+    .header-contents p {
+      font-size: 0.8rem;
+    }
+  
+    .header-contents button {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+  }
+  

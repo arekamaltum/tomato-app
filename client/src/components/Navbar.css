@@ -1,0 +1,225 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Logo */
+  .navbar img {
+    height: 48px;
+    cursor: pointer;
+  }
+  
+  /* Navbar Menu */
+  .navbar-menu {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  
+  .navbar-menu li {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  /* Hover underline effect */
+  .navbar-menu li::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #ff4d30;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navbar-menu li:hover::after {
+    width: 100%;
+  }
+  
+  /* Active menu item */
+  .navbar-menu li.active {
+    color: #ff4d30;
+    font-weight: 600;
+  }
+  
+  .navbar-menu li.active::after {
+    width: 100%;
+  }
+  
+  /* Right section */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar-right img {
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+  }
+  
+  /* Basket icon with dot */
+  .navbar-search-icon {
+    position: relative;
+  }
+  
+  .navbar-search-icon .dot {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    height: 8px;
+    width: 8px;
+    background: red;
+    border-radius: 50%;
+  }
+  
+  /* Sign in button */
+  .navbar-right button {
+    background: #ff4d30;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, transform 0.2s ease;
+  }
+  
+  .navbar-right button:hover {
+    background: #e63f25;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .navbar-menu {
+      gap: 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      gap: 16px;
+      padding: 16px 20px;
+    }
+  
+    .navbar-menu {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+  
+    .navbar-right {
+      gap: 16px;
+    }
+  }
+  /* Navbar Profile */
+.navbar-profile {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.navbar-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.navbar-profile img:hover {
+  border-color: #ff4c24;
+}
+
+/* Dropdown Menu */
+.navbar-profile ul {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.navbar-profile:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navbar-profile ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.navbar-profile ul li img {
+  width: 18px;
+  height: 18px;
+}
+
+.navbar-profile ul li:hover {
+  background: #f6f6f6;
+}
+
+/* Divider */
+.navbar-profile ul hr {
+  margin: 5px 0;
+  border: none;
+  height: 1px;
+  background: #eee;
+}
+
+/* Sign in button */
+button {
+  background: #ff4c24;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e64320;
+}
+
+  

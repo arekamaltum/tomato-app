@@ -1,0 +1,120 @@
+/* Wrapper */
+.explore-menu {
+    padding: 50px 8%;
+    text-align: center;
+  }
+  
+  .explore-menu h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: capitalize;
+  }
+  
+  .explore-menu-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* Scrollable menu list */
+  .menu-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;   /* horizontal scroll */
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ff4d30 #f1f1f1;
+  }
+  
+  .menu-list-items {
+    flex: 0 0 auto;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .menu-list-items:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-list-items img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .menu-list-items img.active {
+    border: 3px solid #ff4d30;
+    background: #ffeae6;
+    transform: scale(1.1);
+  }
+  
+  .menu-list-items p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-transform: capitalize;
+  }
+  
+  /* Custom scrollbar */
+  .menu-list::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .menu-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .menu-list::-webkit-scrollbar-thumb {
+    background: #ff4d30;
+    border-radius: 10px;
+  }
+  
+  .menu-list::-webkit-scrollbar-thumb:hover {
+    background: #e63f25;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .explore-menu {
+      padding: 40px 5%;
+    }
+  
+    .explore-menu h1 {
+      font-size: 1.6rem;
+    }
+  
+    .menu-list-items img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .menu-list-items p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .explore-menu h1 {
+      font-size: 1.3rem;
+    }
+  
+    .menu-list-items img {
+      width: 65px;
+      height: 65px;
+    }
+  
+    .menu-list-items p {
+      font-size: 0.8rem;
+    }
+  }
+  
